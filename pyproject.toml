@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oct-enface-quality"
+version = "0.1.0"
+description = "EfficientNetV2-L OCT en face image quality assessment"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Wei-Chun Lin" }
+]
+license = { text = "Proprietary" }
+keywords = [
+  "OCT",
+  "ophthalmology",
+  "image quality",
+  "efficientnet",
+  "deep learning",
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: Other/Proprietary License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+  "torch>=2.1",
+  "torchvision>=0.16",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "Pillow>=10.0",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "tqdm>=4.66",
+  "PyYAML>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/<your-org-or-user>/oct-enface-quality"
+Repository = "https://github.com/<your-org-or-user>/oct-enface-quality"
+Issues = "https://github.com/<your-org-or-user>/oct-enface-quality/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["oct_quality*"]

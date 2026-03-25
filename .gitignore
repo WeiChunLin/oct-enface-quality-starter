@@ -1,0 +1,31 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+test/
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs / outputs
+*.log
+predictions.csv
+results/
+
+# Optional: local test data
+test_images/
+
+# IMPORTANT:
+# Do NOT ignore checkpoints if using Git LFS
+# checkpoints/*.pth

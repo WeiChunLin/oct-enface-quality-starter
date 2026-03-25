@@ -1,0 +1,41 @@
+project:
+  name: oct-enface-quality
+  task: binary image classification
+  description: EfficientNetV2-L model for OCT en face image quality assessment
+
+model:
+  architecture: efficientnet_v2_l
+  classifier_dropout: 0.5
+  num_outputs: 1
+  output_activation_for_inference: sigmoid
+
+labels:
+  negative_class:
+    value: 0
+    name: not acceptable
+  positive_class:
+    value: 1
+    name: acceptable
+
+preprocessing:
+  image_size: 480
+  input_mode: grayscale
+  grayscale_channels_before_repeat: 1
+  output_channels_after_repeat: 3
+  normalization:
+    mean: [0.5]
+    std: [0.5]
+
+inference:
+  decision_threshold: 0.5
+  probability_name: probability_acceptable
+
+checkpoint_loading:
+  supported_keys:
+    - state_dict
+    - model_state_dict
+  remove_dataparallel_prefix: true
+
+notes:
+  transform_source: notebook cell 12
+  release_scope: inference and evaluation only
