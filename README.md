@@ -131,3 +131,9 @@ print(df.head())
     model development.
 
 
+## Disclaimer
+
+This model is provided for research and educational purposes only.
+
+It is not intended for clinical use, diagnosis, or treatment decisions.
+Clinical deployment requires rigorous validation and regulatory approval.
