@@ -1,4 +1,4 @@
-# OCT en face image quality assessment
+# OCT image quality assessment (Zeiss; Cirrus; ONH)
 
 Starter repo files for an **inference/evaluation-only** release of a fine-tuned **EfficientNetV2-L** model for **OCT en face image quality assessment**.
 
